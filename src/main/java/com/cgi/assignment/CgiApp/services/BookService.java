@@ -11,4 +11,6 @@ public interface BookService {
     ResponseDto<Void> deleteBook(Integer bookId);
 
     ResponseDto<List<Book>> getAllBooks();
+
+    ResponseDto<Book> update(Integer bookId, Book book);
 }

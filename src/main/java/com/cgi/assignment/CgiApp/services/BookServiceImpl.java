@@ -29,6 +29,17 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public ResponseDto<Book> update(Integer bookId, Book newBook) {
+        Book book = bookRepository.findById(bookId).orElseThrow(() -> new ResourceNotFoundException("Book", "Id", bookId.toString()));
+        book.setAuthor(newBook.getAuthor());
+        book.setYear(newBook.getYear());
+        book.setLanguage(newBook.getLanguage());
+        book.setName(newBook.getName());
+        Book updatedBook = bookRepository.save(book);
+        return new ResponseDto<>("Book udpated successfully", true, updatedBook, null);
+    }
+
+    @Override
     public ResponseDto<List<Book>> getAllBooks() {
         Iterable<Book> itrBooks = bookRepository.findAll();
         List<Book> books = StreamSupport.stream(itrBooks.spliterator(), false).toList();
