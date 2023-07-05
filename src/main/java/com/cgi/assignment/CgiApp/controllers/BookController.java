@@ -2,7 +2,7 @@ package com.cgi.assignment.CgiApp.controllers;
 
 import com.cgi.assignment.CgiApp.dto.ResponseDto;
 import com.cgi.assignment.CgiApp.entities.Book;
-import com.cgi.assignment.CgiApp.services.BookService;
+import com.cgi.assignment.CgiApp.services.book.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

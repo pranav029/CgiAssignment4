@@ -1,4 +1,4 @@
-package com.cgi.assignment.CgiApp.services;
+package com.cgi.assignment.CgiApp.services.book;
 
 import com.cgi.assignment.CgiApp.dto.ResponseDto;
 import com.cgi.assignment.CgiApp.entities.Book;
@@ -36,7 +36,7 @@ public class BookServiceImpl implements BookService {
         book.setLanguage(newBook.getLanguage());
         book.setName(newBook.getName());
         Book updatedBook = bookRepository.save(book);
-        return new ResponseDto<>("Book udpated successfully", true, updatedBook, null);
+        return new ResponseDto<>("Book updated successfully", true, updatedBook, null);
     }
 
     @Override

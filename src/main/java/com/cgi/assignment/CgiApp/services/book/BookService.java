@@ -1,4 +1,4 @@
-package com.cgi.assignment.CgiApp.services;
+package com.cgi.assignment.CgiApp.services.book;
 
 import com.cgi.assignment.CgiApp.dto.ResponseDto;
 import com.cgi.assignment.CgiApp.entities.Book;
